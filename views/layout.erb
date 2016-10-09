@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+  <html lang="en">
+    <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="author" content="Yuichi Hagio">
+      <meta name="description" content="Sinatra + Ruby based Blackjack game">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+      <link rel="stylesheet" href="https://code.getmdl.io/1.2.1/material.indigo-pink.min.css">
+      <link rel="stylesheet" href="./main.css">
+      <script defer src="https://code.getmdl.io/1.2.1/material.min.js"></script>
+      <title>Blackjack</title>
+    </head>
+    <body>
+
+      <!-- Always shows a header, even in smaller screens. -->
+      <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+        <header class="mdl-layout__header">
+          <div class="mdl-layout__header-row">
+            <!-- Title -->
+            <span class="mdl-layout-title">Blackjack</span>
+            <!-- Add spacer, to align navigation to the right -->
+            <div class="mdl-layout-spacer"></div>
+            <!-- Navigation. We hide it in small screens. -->
+            <nav class="mdl-navigation mdl-layout--large-screen-only">
+              <a class="mdl-navigation__link" href="">Home</a>
+              <a class="mdl-navigation__link" href="">About</a>
+              <a class="mdl-navigation__link" href="">Reset</a>
+            </nav>
+          </div>
+        </header>
+        <div class="mdl-layout__drawer">
+          <span class="mdl-layout-title">Blackjack</span>
+          <nav class="mdl-navigation">
+            <a class="mdl-navigation__link" href="">Home</a>
+            <a class="mdl-navigation__link" href="">About</a>
+            <a class="mdl-navigation__link" href="">Reset</a>
+          </nav>
+        </div>
+        <main class="mdl-layout__content">
+          <div class="page-content container">
+            <!-- Your content goes here -->
+            <%= yield %>
+          </div>
+        </main>
+      </div>
+
+      
+    </body>
+  </html>
+</html>

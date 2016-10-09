@@ -1,0 +1,12 @@
+<h4><%= hi(session[:player_name]) %></h4>
+
+<div>
+  <p>Delaer's cards</p>
+  <p>Hidden</p>
+  <p><%= session[:dealer_cards][1]%></p>
+  
+  <p>Your cards are: </p>
+  <% session[:player_cards].each do |card| %>
+    <p><%= card %></p>
+  <% end %>
+</div>
