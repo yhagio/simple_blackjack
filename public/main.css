@@ -1,8 +1,72 @@
+/* Base */
+body {
+  font-family: sans-serif;
+}
+
+p {
+ font-size: 16px;  
+}
+
+img {
+  width: 110px;
+}
+
+/* Layout */
 .container {
-  padding: 20px;
+  padding: 0 20px;
   text-align: center;
+  max-width: 800px;
+  margin: auto;
 }
 
 .center {
   margin: auto;
+}
+
+/* Notification Styles */
+.notification-box {
+  padding: 10px;
+  text-align: center;
+}
+
+.notification {
+  padding-top: 6px;
+  height: 30px;
+  width: 100%;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  font-size: 16px;
+  font-weight: 400;
+  overflow: hidden;
+  z-index: 1;
+  position: relative;
+  border-radius: 2px;
+  box-sizing: border-box;
+}
+
+.custom-error {
+  background-color: rgb(244, 67, 54);
+}
+
+.custom-success {
+  background-color: rgb(76, 175, 80);
+}
+
+/* Game Board */
+.board {
+  margin-top: 10px;
+}
+
+/* Hit / Stay action buttons */
+.hit_stay_form {
+  display: inline-block;
+}
+
+/* Play again message */
+.play_again_message {
+  line-height: 0.5;
 }

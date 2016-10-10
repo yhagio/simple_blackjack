@@ -1,11 +1,21 @@
 ### Simple Blackjack game built with Ruby + Sinatra + MDL 
 
+![Screenshot](/scr.png)
+
+
 ### How to start locally
+
 ```
-git clone 
+git clone git@github.com:yhagio/simple_blackjack.git sb
 cd sb
 gem install sinatra
 ruby app.rb
+```
+
+- [Install Ruby / Rails reference](http://railsapps.github.io/installrubyonrails-mac.html)
+```
+\curl -L https://get.rvm.io | bash -s stable
+rvm install ruby-2.3.1
 ```
 
 ### Game Rule

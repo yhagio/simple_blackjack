@@ -1,12 +1,44 @@
-<h4><%= hi(session[:player_name]) %></h4>
-
-<div>
-  <p>Delaer's cards</p>
-  <p>Hidden</p>
-  <p><%= session[:dealer_cards][1]%></p>
-  
-  <p>Your cards are: </p>
+<div class="board">
+  <p>Dealer's cards</p>
+    <span><img src='/images/cards/cover.jpg'></span>
+  <% session[:dealer_cards].drop(1).each do |card| %>
+    <span><%= display_card_image(card) %></span>
+  <% end %>
+  <hr />
+  <p><%= session[:player_name] %>'s cards toal: <strong><%= calculate_total(session[:player_cards]) %></strong></p>
+  <div>
   <% session[:player_cards].each do |card| %>
-    <p><%= card %></p>
+    <span><%= display_card_image(card) %></span>
+  <% end %>
+  </div>
+
+  <br />
+  <% if @show_hit_stay_buttons %>
+    <hr />
+
+    <form action="/game/hit" method="post" class="hit_stay_form">
+      <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--primary">Hit</button>
+    </form>
+
+    <form action="/game/stay" method="post" class="hit_stay_form">
+      <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">Stay</button>
+    </form>
+  <% end %>
+  <% if @dealer_hit_only %>
+    <hr />
+    <form action="/game/dealer-hit" method="post" class="hit_stay_form">
+      <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">Deal one to dealer</button>
+    </form>
+  <% end %>
+  <% if @game_over %>
+    <hr />
+    <p class="play_again_message">You wanna play again?</p>
+    <form action="/reset-game" method="post" class="hit_stay_form">
+      <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--primary">Yes!</button>
+    </form>
+
+    <form action="/quit-game" method="post" class="hit_stay_form">
+      <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">Quit Game</button>
+    </form>
   <% end %>
 </div>
