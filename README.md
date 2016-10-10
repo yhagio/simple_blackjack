@@ -2,8 +2,10 @@
 
 ### DEMO
 
-*Note: Demo does not work on Chrome browser*
 - DEMO LINK: https://mysterious-brook-75749.herokuapp.com
+
+*Note: Demo does not work on Chrome browser*
+- Issue Reference: http://stackoverflow.com/questions/33218375/sinatra-rack-session-lost-after-5-to-10-seconds
 
 ![Screenshot](/scr.png)
 
