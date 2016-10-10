@@ -1,5 +1,9 @@
 ### Simple Blackjack game built with Ruby + Sinatra + MDL 
 
+### DEMO
+
+https://mysterious-brook-75749.herokuapp.com
+
 ![Screenshot](/scr.png)
 
 

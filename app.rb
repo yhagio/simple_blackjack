@@ -2,12 +2,12 @@ require 'rubygems'
 require 'sinatra'
 # require 'pry'
 
-set :sessions, true
+# set :sessions, true
 
 # === Fix for Chrome:  Problems when POST requests are sent (Replace Line 5) ===
-# use Rack::Session::Cookie, :key => 'rack.session',
-#                            :path => '/',
-#                            :secret => 'random_secret_string' 
+use Rack::Session::Cookie, :key => 'rack.session',
+                           :path => '/',
+                           :secret => 'random_secret_string' 
 
 # === Helper methods ===
 helpers do
