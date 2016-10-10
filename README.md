@@ -2,7 +2,8 @@
 
 ### DEMO
 
-https://mysterious-brook-75749.herokuapp.com
+*Note: Demo does not work on Chrome browser*
+- DEMO LINK: https://mysterious-brook-75749.herokuapp.com
 
 ![Screenshot](/scr.png)
 
